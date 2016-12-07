@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BCMain/BCMain.iml" filepath="$PROJECT_DIR$/BCMain/BCMain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConnectToWeb/ConnectToWeb.iml" filepath="$PROJECT_DIR$/ConnectToWeb/ConnectToWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CookieClickerAutomation/CookieClickerAutomation.iml" filepath="$PROJECT_DIR$/CookieClickerAutomation/CookieClickerAutomation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataTypes/DataTypes.iml" filepath="$PROJECT_DIR$/DataTypes/DataTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HowTheMarketWorks/HowTheMarketWorks.iml" filepath="$PROJECT_DIR$/HowTheMarketWorks/HowTheMarketWorks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaApplet/JavaApplet.iml" filepath="$PROJECT_DIR$/JavaApplet/JavaApplet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaApplication/JavaApplication.iml" filepath="$PROJECT_DIR$/JavaApplication/JavaApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MetaPrograming/MetaPrograming.iml" filepath="$PROJECT_DIR$/MetaPrograming/MetaPrograming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OpenCV/OpenCV.iml" filepath="$PROJECT_DIR$/OpenCV/OpenCV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RobotAndSelenium/RobotAndSelenium.iml" filepath="$PROJECT_DIR$/RobotAndSelenium/RobotAndSelenium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testing/Testing.iml" filepath="$PROJECT_DIR$/Testing/Testing.iml" />
+    </modules>
+  </component>
+</project>
