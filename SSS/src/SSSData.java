@@ -1,16 +1,27 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 
 // class SSSData -- class to manage a list of integer data for search/sort exploration.
 // SSSData gets a size specified when it is created; the data it contains will range 
 // from 1 to double that size (so an SSData(4) will contain numbers from 1 to 8);
 public class SSSData {
-	
+	public int size = 0;
 	private int[] data = null;
 	private int hits = 0;
-	
+
+	public int getSize() {
+		return size;
+		
+	}
+
+
 	public SSSData(int size) {
 		data = new int[size];
+		this.size = size;
+
 		randomize();
 	}
 
