@@ -1,5 +1,3 @@
-package lsrhs.java;
-
 public class NewTestMaze extends Maze {
 	private static final boolean newGrid[][] = {
 		{false, true,  false, false, false, true, false},

@@ -5,14 +5,20 @@
       <module fileurl="file://$PROJECT_DIR$/BCMain/BCMain.iml" filepath="$PROJECT_DIR$/BCMain/BCMain.iml" />
       <module fileurl="file://$PROJECT_DIR$/ConnectToWeb/ConnectToWeb.iml" filepath="$PROJECT_DIR$/ConnectToWeb/ConnectToWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/CookieClickerAutomation/CookieClickerAutomation.iml" filepath="$PROJECT_DIR$/CookieClickerAutomation/CookieClickerAutomation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/DataTypes/DataTypes.iml" filepath="$PROJECT_DIR$/DataTypes/DataTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EightGame/EightGame.iml" filepath="$PROJECT_DIR$/EightGame/EightGame.iml" />
       <module fileurl="file://$PROJECT_DIR$/HowTheMarketWorks/HowTheMarketWorks.iml" filepath="$PROJECT_DIR$/HowTheMarketWorks/HowTheMarketWorks.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaApplet/JavaApplet.iml" filepath="$PROJECT_DIR$/JavaApplet/JavaApplet.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaApplication/JavaApplication.iml" filepath="$PROJECT_DIR$/JavaApplication/JavaApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/MetaPrograming/MetaPrograming.iml" filepath="$PROJECT_DIR$/MetaPrograming/MetaPrograming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NeuralNetwork/NeuralNetwork.iml" filepath="$PROJECT_DIR$/NeuralNetwork/NeuralNetwork.iml" />
       <module fileurl="file://$PROJECT_DIR$/OpenCV/OpenCV.iml" filepath="$PROJECT_DIR$/OpenCV/OpenCV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Processing2/Processing2.iml" filepath="$PROJECT_DIR$/Processing2/Processing2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RoboCode/RoboCode.iml" filepath="$PROJECT_DIR$/RoboCode/RoboCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/RobotAndSelenium/RobotAndSelenium.iml" filepath="$PROJECT_DIR$/RobotAndSelenium/RobotAndSelenium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSS/SSS.iml" filepath="$PROJECT_DIR$/SSS/SSS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleSort/SimpleSort.iml" filepath="$PROJECT_DIR$/SimpleSort/SimpleSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/Testing/Testing.iml" filepath="$PROJECT_DIR$/Testing/Testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jrogue3/jrogue3.iml" filepath="$PROJECT_DIR$/jrogue3/jrogue3.iml" />
     </modules>
   </component>
 </project>

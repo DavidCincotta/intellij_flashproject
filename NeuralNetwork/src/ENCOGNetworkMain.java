@@ -9,6 +9,7 @@ import org.encog.ml.data.versatile.normalizers.strategies.NormalizationStrategy;
 import org.encog.ml.data.versatile.sources.CSVDataSource;
 import org.encog.ml.train.MLTrain;
 import org.encog.neural.freeform.FreeformNetwork;
+import org.encog.neural.freeform.training.FreeformResilientPropagation;
 import org.encog.neural.networks.BasicNetwork;
 import org.encog.neural.networks.layers.BasicLayer;
 import org.encog.neural.networks.training.propagation.back.Backpropagation;
@@ -20,7 +21,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-public class NetworkMain {
+public class ENCOGNetworkMain {
     public static double XOR_INPUT[][] = { { 0.0, 0.0 },
             { 1.0, 0.0 },
             { 0.0, 1.0 },
@@ -86,8 +87,8 @@ public class NetworkMain {
         basicNetwork.addLayer(new BasicLayer(new ActivationSigmoid(),false,10));
         basicNetwork.addLayer(new BasicLayer(new ActivationSigmoid(),false,1));
         basicNetwork.getStructure().finalizeStructure();basicNetwork.reset();
-        FreeformNetwork network = new FreeformNetwork(basicNetwork);
-        network.reset();
+        FreeformNetwork freeformNetwork = new FreeformNetwork(basicNetwork);
+        freeformNetwork.reset();
 
         //CalculateScore score = new TrainingSetScore(trainingSet);
         //BasicPopulation population = new BasicPopulation(10, new DoubleArrayGenomeFactory(100));
@@ -107,15 +108,14 @@ public class NetworkMain {
         //MLDataSet testingSet = new BasicMLDataSet(testData.input, data.ideal);
         //MLDataSet trainingSet = new BasicMLDataSet(CIRCLE_INPUT,CIRCLE_IDEAL);
         MLTrain train = new ResilientPropagation(basicNetwork,trainingSet);
-        EncogUtility.trainToError(train,.01);
+        MLTrain trainFreeform = new FreeformResilientPropagation(freeformNetwork,trainingSet);
+        EncogUtility.trainToError(trainFreeform,.01);
         //EncogUtility.trainToError(network,trainingSet,.01);
         //System.out.println("Network Training Results:");
         //EncogUtility.evaluate(basicNetwork,trainingSet);
-
-        double[] input = {.2,.2,.2,.2,.2,.2,.2,.2,.2,.2};
-        double[] output = new double[1];
-        System.out.println(network.compute(new BasicMLData(input)));
-
+        //double[] input = {.2,.2,.2,.2,.2,.2,.2,.2,.2,.2};
+        //double[] output = new double[1];
+        System.out.println(EncogUtility.calculateClassificationError(freeformNetwork, new BasicMLDataSet(testData.input, testData.ideal)));
         /*
         for (int i = 0; i < length; i++) {
             Random random = new Random(69);

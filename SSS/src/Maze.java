@@ -5,6 +5,10 @@
 // Location 0,0 is the upper left corner, location 2, 0 is two cells to the right of that,
 // and location width - 1, height - 1 is the lower right corner and also the exit for the maze.
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Stack;
+
 public class Maze {
 	private static final int DEFAULT_WIDTH = 7;
 	private static final int DEFAULT_HEIGHT = 7;
@@ -75,13 +79,44 @@ public class Maze {
 			System.out.print("#");
 			for (int col = 0; col < width; col++) {
 				MazeCoords coords = new MazeCoords(col, row);
-				if (isStartSquare(coords)) 
+				if (isStartSquare(coords))
 					System.out.print("S");
 				else if (isEndSquare(coords))
 					System.out.print("E");
-			    else if (isPassable(coords)) 
+				else if (isPassable(coords))
 					System.out.print(" ");
 				else
+					System.out.print("#");
+			}
+			System.out.println("#");
+		}
+		for (int i = 0; i < width + 2; i++)
+			System.out.print("#");
+		System.out.println();
+	}
+	public void printSolvedMaze(ArrayList<MazeCoords> points) throws Exception{
+		for (int i = 0; i < width + 2; i++)
+			System.out.print("#");
+		System.out.println();
+		for (int row = 0; row < height; row++) {
+			System.out.print("#");
+			for (int col = 0; col < width; col++) {
+				boolean hasBeenPrinted = false;
+				MazeCoords coords = new MazeCoords(col, row);
+				for (MazeCoords a :
+						points) {
+					if (a.y == coords.y && a.x == coords.x && !isStartSquare(coords) && !isEndSquare(coords)) {
+						System.out.print("+");
+						hasBeenPrinted = true;
+					}
+				}
+				if (isStartSquare(coords))
+					System.out.print("S");
+				else if (isEndSquare(coords))
+					System.out.print("E");
+				else if (isPassable(coords) && !hasBeenPrinted)
+					System.out.print(" ");
+				else if (!isPassable(coords))
 					System.out.print("#");
 			}
 			System.out.println("#");

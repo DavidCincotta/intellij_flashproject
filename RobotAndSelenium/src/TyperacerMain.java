@@ -18,9 +18,36 @@ public class TyperacerMain{
     static WebDriver driver;
     public static void main(String[] args) throws Exception {
         bot = new Robot();
-        TYPERACER(0, 115);//115 approaches 100 wpm
+        TYPERACER(0, 0);//115 approaches 100 wpm
         //whenPlayingSomeOne("http://play.typeracer.com/?rt=1eorgmpm2onmp",115);
-        System.out.println(MouseInfo.getPointerInfo().getLocation());
+        //mineSweeper();
+        //System.out.println(MouseInfo.getPointerInfo().getLocation());
+    }
+
+    public static void mineSweeper(){
+        System.setProperty("webdriver.gecko.driver", "../../downloads/geckodriver");
+        WebDriver driver = new FirefoxDriver();
+        driver.get("http://minesweeperonline.com/");
+
+        MineSweeperBoard board = new MineSweeperBoard(driver);
+        for (int[] a :
+                board.board) {
+            for (int b :
+                    a) {
+                System.out.print(b+", ");
+            }
+            System.out.println("");
+        }
+        while (true){
+            for (int i = 0; i < board.board.length; i++) {
+                for (int j = 0; j < board.board[i].length; j++) {
+                    board.autoCompleteSquare(i,j);
+                }
+            }
+        }
+
+        //driver.close();driver.quit();
+
     }
     private static void TYPERACER(int practiceint, int timeDelay) {
         System.setProperty("webdriver.gecko.driver", "../../downloads/geckodriver");
@@ -46,8 +73,8 @@ public class TyperacerMain{
             }
             System.out.println("In Race");
             ArrayList<String> typeRacerBoxString = new ArrayList();
-            double time =5000;// = waitForTimeNoPractice(driver)*100000;
-            Thread.sleep(3000);
+            double time =8000;// = waitForTimeNoPractice(driver)*100000;
+            Thread.sleep(6000);
             java.util.List<WebElement> elements = driver.findElements(By.tagName("span"));
             recursiveCheck(driver);
             Thread.sleep(2000);
@@ -85,7 +112,7 @@ public class TyperacerMain{
             bot.mouseMove(500,500);
             leftClick(0);//click out of url
             log(typeRacerBox);
-            Thread.sleep((long) (time));
+            Thread.sleep((long) (time+2000));
             System.out.println("Time: " + (time));
             type(typeRacerBox, timeDelay);
         } catch (Exception e) {
